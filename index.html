@@ -77,13 +77,25 @@
       font-size: 14px;
       opacity: 0.7;
     }
+
+    .hint {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+  </audio>
+
   <header>
     <h1>Happy Valentine's Day, Sayang! <span class="heart">❤️</span></h1>
     <p>Terima kasih telah menjadi bagian terindah dalam hidupku.</p>
+    <p class="hint">💌 Klik di mana saja untuk memulai lagu</p>
   </header>
 
   <div class="container">
@@ -98,8 +110,9 @@
     <div class="love-letter">
       <h3>For you,</h3>
       <p>
-       “On this day of love, I just want you to know how much your presence means to me. Every laugh we share and every obstacle we overcome makes me even more grateful to have you. May our love continue to grow as time goes by.”
-
+        “On this day of love, I just want you to know how much your presence means to me.
+        Every laugh we share and every obstacle we overcome makes me even more grateful to have you.
+        May our love continue to grow as time goes by.”
       </p>
       <p>Selamanya milikmu,</p>
       <p><strong>Rafi</strong></p>
@@ -107,8 +120,16 @@
   </div>
 
   <footer>
-    Dibuat oleh apiii ❤️ 
+    Dibuat oleh apiii ❤️
   </footer>
+
+  <!-- SCRIPT AUTOPLAY -->
+  <script>
+    document.addEventListener("click", function () {
+      const music = document.getElementById("bgMusic");
+      music.play();
+    }, { once: true });
+  </script>
 
 </body>
 </html>
